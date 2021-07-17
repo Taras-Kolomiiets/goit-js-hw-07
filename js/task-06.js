@@ -3,12 +3,12 @@ const inputValueLength = Number(input.getAttribute('data-length'));
 
 input.addEventListener('blur', onInputBlur);
 
-function onInputBlur() {
-    if (input.value.length === inputValueLength) {
-        input.classList.add('valid');
-        input.classList.remove('invalid');
+function onInputBlur(event) {
+    if (event.currentTarget.value.length === inputValueLength) {
+        event.currentTarget.classList.add('valid');
+        event.currentTarget.classList.remove('invalid');
         return;
     }
-    input.classList.remove('valid');
-    input.classList.add('invalid');
+    event.currentTarget.classList.remove('valid');
+    event.currentTarget.classList.add('invalid');
 }
