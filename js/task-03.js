@@ -24,7 +24,7 @@ const galleryList = (array) => {
    alt = ${itemAlt} width="300" height="180"></li>`;
   })
 
-  return galleryListContainer.insertAdjacentHTML('afterbegin', newArray);
+  return galleryListContainer.insertAdjacentHTML('afterbegin', newArray.join(''));
 };
 
 galleryList(images);
