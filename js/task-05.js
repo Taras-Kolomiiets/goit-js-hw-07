@@ -4,5 +4,5 @@ const name = document.querySelector('#name-output');
 input.addEventListener('input', onInputChange)
 
 function onInputChange(event) {
-    name.textContent = event.currentTarget.value || 'незнакомец';
+    name.textContent = event.currentTarget.value.trim() || 'незнакомец';
 };

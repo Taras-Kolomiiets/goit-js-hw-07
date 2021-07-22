@@ -20,11 +20,11 @@ const galleryList = (array) => {
   const newArray = array.map(item => {
     const itemUrl = item.url;
     const itemAlt = item.alt;
-    return galleryListContainer.insertAdjacentHTML('afterbegin', `<li><img class="image" src = ${itemUrl},
-   alt = ${itemAlt} width="300" height="180"></li>`);
+    return `<li><img class="image" src = ${itemUrl},
+   alt = ${itemAlt} width="300" height="180"></li>`;
   })
 
-  return newArray;
+  return galleryListContainer.insertAdjacentHTML('afterbegin', newArray);
 };
 
 galleryList(images);
